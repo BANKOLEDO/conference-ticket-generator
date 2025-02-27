@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --neutral-0: hsl(0, 0%, 100%);
+    --neutral-300: hsl(252, 6%, 83%);
+    --neutral-500: hsl(245, 15%, 58%);
+    --neutral-700: hsl(245, 19%, 35%);
+    --neutral-800: hsla(245, 19%, 35%, 0.2);
+    --neutral-900: hsl(248, 70%, 10%);
+    --orange-500: hsl(7, 88%, 67%);
+    --orange-700: hsl(7, 71%, 60%);
+    --gradient-text: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+}
+
+#entire-page {
+    font-family: Inconsolata;
+    min-height: 120rem;
+    min-width: 100vw;
+    background-repeat: no-repeat;
+    background: url(../assets/images/background-mobile.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pattern-lines {
+    position: absolute;
+}
+
+.pattern-s-top {
+    position: absolute;
+    width: 10rem;
+    height: 3.5rem;
+    top: 1rem;
+    left: 16rem;
+}
+
+.top-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 1rem 0;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.conf-logo {
+    padding: 1rem 0;
+}
+
+.text-h-container {
+    margin: 1rem 0;
+    width: 24rem;
+}
+
+.heading-01 {
+    color: var(--neutral-0);
+    text-align: center;
+    padding: 0.2rem 3.7rem;
+}
+
+.paragraph-01 {
+    color: var(--neutral-500);
+    text-align: center;
+    padding: 1rem 4rem 0.3rem 4rem;
+}
+
+.form-container {
+    color: white;
+    padding: 0 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.upload-avatar-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--neutral-300);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.upload-box {
+    position: relative;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 1rem 0.5rem 1rem;
+    border: 2px dashed var(--neutral-500);
+    border-radius: 0.7rem;
+    text-align: center;
+    color: var(--neutral-500);
+    background-color: var(--neutral-800);
+    cursor: pointer;
+}
+
+.file-input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.icon-upload {
+    background-color: var(--neutral-700);
+    border-radius: 0.6rem;
+    align-self: center;
+    width: 3rem;
+    height: 3rem;
+    margin-top: 0.4rem;
+    padding: 0.4rem;
+}
+
+.custom-file-label {
+    padding: 1rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.icon-upload:hover {
+    border-color: var(--neutral-500);
+    color: var(--neutral-700);
+}
+
+.upload-notice-box {
+    display: flex;
+    align-items: center;
+    margin: 0 0 1.5rem 0;
+}
+
+.upload-notice {
+    font-size: 0.8rem;
+    font-weight: 900;
+    margin-left: 0.5rem;
+    color: var(--neutral-500);
+}
+
+.input-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    margin-bottom: 0.6rem;
+}
+
+.input-box {
+    padding: 0.7rem;
+    margin: 0 0 0.7rem 0;
+    border-radius: 1rem;
+    color: var(--neutral-500);
+    font-weight: 900;
+    background-color: var(--neutral-800);
+    cursor: pointer;
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
