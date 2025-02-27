@@ -18,12 +18,12 @@
     --gradient-text: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
 }
 
-#entire-page {
+body {
     font-family: Inconsolata;
-    min-height: 120rem;
+    min-height: 100vh;
     min-width: 100vw;
-    background-repeat: no-repeat;
-    background: url(../assets/images/background-mobile.png);
+    background: url(../assets/images/background-mobile.png) no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,6 +73,7 @@
 }
 
 .form-container {
+    position: relative;
     color: white;
     padding: 0 20px;
     border-radius: 8px;
@@ -158,8 +159,9 @@
 }
 
 .input-box {
-    padding: 0.7rem;
+    padding: 0.8rem;
     margin: 0 0 0.7rem 0;
+    border: 1px solid var(--neutral-0);
     border-radius: 1rem;
     color: var(--neutral-500);
     font-weight: 900;
@@ -167,8 +169,36 @@
     cursor: pointer;
 }
 
+.btn-container {
+    display: flex;
+    align-items: center;
+}
+
+#generate-ticket-btn {
+    position: relative;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 0.7rem;
+    color: var(--neutral-900);
+    background: var(--orange-500);
+    z-index: 2;
+    padding: 1rem;
+}
+
+.pattern-s-bottom {
+    position: absolute;
+    width: 17rem;
+    height: 17rem;
+    left: -0.5rem;
+    bottom: -8rem;
+    z-index: 1;
+}
 
 .attribution { 
+    color: white;
     font-size: 11px; 
     text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
