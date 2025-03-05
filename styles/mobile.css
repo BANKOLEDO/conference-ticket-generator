@@ -18,19 +18,31 @@
     --gradient-text: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
 }
 
+html, body {
+    height: 100%;  /* Ensure body stretches to full height of the viewport */
+    margin: 0;     /* Remove default margins */
+}
+
 body {
-    position: absolute;
+    position: relative;  /* Avoid absolute positioning */
     font-family: Inconsolata;
-    max-height: 100vh;
-    max-width: 100vw;
     background: url(../assets/images/background-mobile.png) no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100%;   /* Ensure body stretches to the full viewport height */
+    min-width: 100%;    /* Ensure body stretches to the full viewport width */
 }
-.pattern-lines {
+
+.pattern-lines-box {
     position: absolute;
+    left: -10rem;
+    display: flex;
+}
+
+.pattern-lines {
+    width: 40rem;
 }
 
 .pattern-s-top {
@@ -41,7 +53,11 @@ body {
     left: 16rem;
 }
 
+
 .top-box {
+    position: relative;
+    top: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
