@@ -19,6 +19,7 @@
 }
 
 body {
+    position: absolute;
     font-family: Inconsolata;
     min-height: 100vh;
     min-width: 100vw;
@@ -73,7 +74,8 @@ body {
 }
 
 .form-container {
-    position: relative;
+    position: absolute;
+    top: 15rem;
     color: white;
     padding: 0 20px;
     border-radius: 8px;
@@ -83,11 +85,11 @@ body {
 }
 
 .upload-avatar-label {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     color: var(--neutral-300);
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 1.3rem;
 }
 
 .upload-box {
@@ -159,7 +161,7 @@ body {
 }
 
 .input-box {
-    padding: 0.8rem;
+    padding: 1rem;
     margin: 0 0 0.7rem 0;
     border: 1px solid var(--neutral-0);
     border-radius: 1rem;
@@ -189,15 +191,17 @@ body {
 }
 
 .pattern-s-bottom {
-    position: absolute;
+    position: relative;
     width: 17rem;
-    height: 17rem;
-    left: -0.5rem;
-    bottom: -8rem;
+    height: 12rem;
+    left: 0;
+    top: 37rem;
     z-index: 1;
 }
 
 .attribution { 
+    position: relative;
+    top: 48rem;
     color: white;
     font-size: 11px; 
     text-align: center; }
