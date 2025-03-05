@@ -21,8 +21,8 @@
 body {
     position: absolute;
     font-family: Inconsolata;
-    min-height: 100vh;
-    min-width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
     background: url(../assets/images/background-mobile.png) no-repeat;
     background-size: cover;
     display: flex;
