@@ -18,31 +18,26 @@
     --gradient-text: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
 }
 
-html, body {
-    height: 100%;  /* Ensure body stretches to full height of the viewport */
-    margin: 0;     /* Remove default margins */
-}
-
 body {
+    min-width: 100vw;
+    min-height: 100vh;
     position: relative;  /* Avoid absolute positioning */
     font-family: Inconsolata;
     background: url(../assets/images/background-mobile.png) no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: 100%;   /* Ensure body stretches to the full viewport height */
-    min-width: 100%;    /* Ensure body stretches to the full viewport width */
+    align-items: center
 }
 
 .pattern-lines-box {
     position: absolute;
-    left: -10rem;
     display: flex;
+    right: 4rem;
 }
 
 .pattern-lines {
-    width: 40rem;
+    width: 100%;
 }
 
 .pattern-s-top {
@@ -90,8 +85,7 @@ body {
 }
 
 .form-container {
-    position: absolute;
-    top: 15rem;
+    position: relative;
     color: white;
     padding: 0 20px;
     border-radius: 8px;
@@ -109,7 +103,6 @@ body {
 }
 
 .upload-box {
-    position: relative;
     margin-bottom: 16px;
     display: flex;
     flex-direction: column;
@@ -126,9 +119,6 @@ body {
 .file-input {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
     opacity: 0;
     cursor: pointer;
 }
@@ -193,7 +183,6 @@ body {
 }
 
 #generate-ticket-btn {
-    position: relative;
     width: 100%;
     font-size: 1rem;
     font-weight: 700;
@@ -207,17 +196,16 @@ body {
 }
 
 .pattern-s-bottom {
-    position: relative;
+    position: absolute;
     width: 17rem;
-    height: 12rem;
+    /* height: 12rem; */
     left: 0;
-    top: 37rem;
+    top: 50rem;
     z-index: 1;
 }
 
-.attribution { 
-    position: relative;
-    top: 48rem;
+.attribution {
+    margin-top: 5rem;
     color: white;
     font-size: 11px; 
     text-align: center; }

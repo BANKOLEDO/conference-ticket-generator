@@ -1,0 +1,11 @@
+@media (min-width: 600px) {
+    .pattern-lines {
+        width: 48rem;
+    }
+}
+
+@media (min-width: 700px) {
+    .pattern-lines {
+    width: 100%;
+    }
+}
