@@ -1,35 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
+/* ========== RESET & ROOT ========== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --neutral-0: hsl(0, 0%, 100%);
-    --neutral-300: hsl(252, 6%, 83%);
-    --neutral-500: hsl(245, 15%, 58%);
-    --neutral-700: hsl(245, 19%, 35%);
-    --neutral-800: hsla(245, 19%, 35%, 0.2);
-    --neutral-900: hsl(248, 70%, 10%);
-    --orange-500: hsl(7, 88%, 67%);
-    --orange-700: hsl(7, 71%, 60%);
-    --gradient-text: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  --neutral-0: hsl(0, 0%, 100%);
+  --neutral-300: hsl(252, 6%, 83%);
+  --neutral-500: hsl(245, 15%, 58%);
+  --neutral-700: hsl(245, 19%, 35%);
+  --neutral-800: hsla(245, 19%, 35%, 0.2);
+  --neutral-900: hsl(248, 70%, 10%);
+  --orange-500: hsl(7, 88%, 67%);
+  --orange-700: hsl(7, 71%, 60%);
+  --gradient-text: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
 }
 
+/* ========== BODY ========== */
 body {
-    min-width: 100vw;
-    min-height: 100vh;
-    position: relative;  /* Avoid absolute positioning */
-    font-family: Inconsolata;
+    font-family: 'Inconsolata', monospace;
     background: url(../assets/images/background-mobile.png) no-repeat;
     background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
 }
 
+/* ========== HEADER & PATTERNS ========== */
 .pattern-lines-box {
     position: absolute;
     display: flex;
@@ -37,176 +40,345 @@ body {
 }
 
 .pattern-lines {
-    width: 100%;
+  width: 100%;
 }
 
 .pattern-s-top {
     position: absolute;
-    width: 10rem;
-    height: 3.5rem;
-    top: 1rem;
-    left: 16rem;
+    top: 1.5rem;
+    right: 0.3rem;
+    width: 6rem;
+    height: auto;
+    z-index: 10;
 }
 
 
+.pattern-s-bottom {
+  position: absolute;
+  width: 17rem;
+  top: 50rem;
+  left: 0;
+  z-index: 1;
+}
+
+/* ========== HEADER CONTENT ========== */
 .top-box {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0 1rem 0;
-}
-
-.flex-column {
-    flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 .conf-logo {
-    padding: 1rem 0;
+  padding: 1rem 0;
 }
 
 .text-h-container {
-    margin: 1rem 0;
-    width: 24rem;
+  width: 24rem;
+  margin: 1rem 0;
 }
 
 .heading-01 {
-    color: var(--neutral-0);
-    text-align: center;
-    padding: 0.2rem 3.7rem;
+  color: var(--neutral-0);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.2rem 2rem;
 }
 
 .paragraph-01 {
-    color: var(--neutral-500);
-    text-align: center;
-    padding: 1rem 4rem 0.3rem 4rem;
+  color: var(--neutral-500);
+  text-align: center;
+  padding: 1rem 2.5rem 0.3rem;
+  font-size: 1rem;
 }
 
+/* ========== FORM ========== */
 .form-container {
-    position: relative;
-    color: white;
-    padding: 0 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+  color: white;
+  padding: 0 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 
+/* === Upload Field === */
 .upload-avatar-label {
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--neutral-300);
-    display: block;
-    margin-bottom: 1.3rem;
-}
-
-.upload-box {
-    margin-bottom: 16px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 1rem 1rem 0.5rem 1rem;
-    border: 2px dashed var(--neutral-500);
-    border-radius: 0.7rem;
-    text-align: center;
-    color: var(--neutral-500);
-    background-color: var(--neutral-800);
-    cursor: pointer;
-}
-
-.file-input {
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.icon-upload {
-    background-color: var(--neutral-700);
-    border-radius: 0.6rem;
-    align-self: center;
-    width: 3rem;
-    height: 3rem;
-    margin-top: 0.4rem;
-    padding: 0.4rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--neutral-300);
+  display: block;
+  margin-bottom: 1.3rem;
 }
 
 .custom-file-label {
-    padding: 1rem 0 0.5rem 0;
-    font-size: 1.1rem;
-    font-weight: 700;
+  z-index: 99;
 }
 
-.icon-upload:hover {
-    border-color: var(--neutral-500);
-    color: var(--neutral-700);
+.upload-box {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 1rem;
+  width: 100%;
+  border: 2px dashed var(--neutral-500);
+  border-radius: 0.7rem;
+  text-align: center;
+  color: var(--neutral-500);
+  background-color: var(--neutral-800);
+  cursor: pointer;
+  transition: border-color 0.3s ease;
 }
 
-.upload-notice-box {
-    display: flex;
-    align-items: center;
-    margin: 0 0 1.5rem 0;
+.upload-box:hover,
+.upload-box:focus {
+  border-color: var(--orange-500);
+  outline: none;
 }
 
-.upload-notice {
-    font-size: 0.8rem;
-    font-weight: 900;
-    margin-left: 0.5rem;
-    color: var(--neutral-500);
-}
-
-.input-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-label {
-    margin-bottom: 0.6rem;
-}
-
-.input-box {
-    padding: 1rem;
-    margin: 0 0 0.7rem 0;
-    border: 1px solid var(--neutral-0);
-    border-radius: 1rem;
-    color: var(--neutral-500);
-    font-weight: 900;
-    background-color: var(--neutral-800);
-    cursor: pointer;
-}
-
-.btn-container {
-    display: flex;
-    align-items: center;
-}
-
-#generate-ticket-btn {
-    width: 100%;
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 1rem 0;
-    border: none;
-    border-radius: 0.7rem;
-    color: var(--neutral-900);
-    background: var(--orange-500);
-    z-index: 2;
-    padding: 1rem;
-}
-
-.pattern-s-bottom {
+.upload-box::before {
+    content: '';
     position: absolute;
-    width: 17rem;
-    /* height: 12rem; */
+    top: 0;
     left: 0;
-    top: 50rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.3); /* semi-transparent grey */
+    opacity: 0;
+    transition: opacity 0.3s ease;
     z-index: 1;
 }
 
+.upload-box:hover::before {
+    opacity: 1;
+}
+
+.file-input {
+  display: none;
+}
+
+.icon-upload {
+  background-color: var(--neutral-700);
+  border-radius: 0.6rem;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 0.4rem;
+  padding: 0.4rem;
+  object-fit: contain;
+}
+
+.custom-file-label {
+  padding: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+/* === Upload Notice === */
+.upload-notice-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.upload-notice {
+  font-size: 0.8rem;
+  font-weight: 900;
+  margin-left: 0.5rem;
+  color: var(--neutral-500);
+}
+
+/* === Input Fields === */
+.input-column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-label {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--neutral-300);
+}
+
+
+.input-box {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  border: 1px solid var(--neutral-0);
+  border-radius: 1rem;
+  color: var(--neutral-500);
+  font-weight: 900;
+  background-color: var(--neutral-800);
+}
+
+.input-box:hover {
+    background-color: rgba(253, 238, 238, 0.068); /* adjust opacity if needed */
+    opacity: 4;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* === Button === */
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#generate-ticket-btn {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 0.7rem;
+  color: var(--neutral-900);
+  background: var(--orange-500);
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#generate-ticket-btn:hover {
+  background-color: var(--orange-700);
+  cursor: pointer;
+}
+
+#generate-ticket-btn:focus {
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
+              0 0 20px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+
+/* ========== TICKET SECTION ========== */
+#ticket-container {
+  padding: 1rem;
+}
+
+.ticket-content {
+  text-align: center;
+}
+
+.ticket {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ticket::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+  pointer-events: none;
+}
+
+.ticket-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.ticket-logo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.ticket-header h3 {
+  color: var(--neutral-0);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.event-details {
+  color: var(--neutral-500);
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.ticket-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.avatar-container {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.avatar-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-info {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.user-info p {
+  color: var(--neutral-0);
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.user-info p:last-child {
+  color: var(--neutral-500);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.ticket-id {
+  position: absolute;
+  right: 0;
+  color: var(--neutral-500);
+  font-family: 'Inconsolata', monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* ========== UTILITIES ========== */
+.highlight {
+  color: var(--orange-500);
+  font-weight: 700;
+}
+
+.hidden {
+  display: none !important;
+}
+
 .attribution {
-    margin-top: 5rem;
-    color: white;
-    font-size: 11px; 
-    text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+  margin-top: 5rem;
+  color: white;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
