@@ -40,7 +40,7 @@ body {
 }
 
 .pattern-lines {
-  width: 100%;
+  width: 250%;
 }
 
 .pattern-s-top {
@@ -148,7 +148,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(128, 128, 128, 0.3); /* semi-transparent grey */
+    background-color: rgba(128, 128, 128, 0.411); /* semi-transparent grey */
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -213,14 +213,20 @@ body {
   padding: 1rem;
   border: 1px solid var(--neutral-0);
   border-radius: 1rem;
-  color: var(--neutral-500);
+  color: var(--neutral-300);
   font-weight: 900;
   background-color: var(--neutral-800);
 }
 
+.input-box::placeholder {
+  color: var(--neutral-300); /* You can use --orange-500, #ccc, etc. */
+  opacity: 1;
+  font-weight: 600;
+}
+
+
 .input-box:hover {
-    background-color: rgba(253, 238, 238, 0.068); /* adjust opacity if needed */
-    opacity: 4;
+    background-color: rgba(255, 255, 255, 0.315); /* adjust opacity if needed */
     transition: opacity 0.3s ease;
     z-index: 1;
 }
@@ -251,12 +257,8 @@ body {
 }
 
 #generate-ticket-btn:focus {
-  outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4),
-              0 0 20px rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
-  transition: all 0.3s ease;
+  border: 2px solid var(--orange-500);
+  box-shadow: 0 0 8px var(--orange-500), 0 0 16px var(--orange-500);
 }
 
 
